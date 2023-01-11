@@ -6,7 +6,7 @@ void setup(){
 
   size(800, 800);
   n = new OpenSimplexNoise();
-  img1 = loadImage("alphamask.png");
+  img1 = loadImage("inf.png");
   img2 = loadImage("smallomega.png");
   
   img1.filter(GRAY);
@@ -53,7 +53,7 @@ void draw(){
       float cThresh = lerp(image1State, image2State, thresh); //<>//
       var nVal = round(map(noiseVal, -1, 1, 0, 1), cThresh); //<>//
      
-      pixels[x + y * width] = color(nVal * 255, nVal * 125, nVal * 82);
+      pixels[x + y * width] = color(nVal * 255);
       
     }
     
